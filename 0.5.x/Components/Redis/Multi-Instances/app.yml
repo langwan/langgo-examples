@@ -1,0 +1,6 @@
+redis:
+  items:
+    main:
+      dsn: redis://default:redispw@localhost:55000/0
+    slave:
+      dsn: redis://default:redispw@localhost:55000/0
