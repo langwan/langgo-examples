@@ -13,8 +13,8 @@ func main() {
 		panic(err)
 		return
 	}
-	defer tempfile.Get().RemoveFile(filename)
-	data, err := tempfile.Get().ReadFile(filename, false)
+
+	data, err := tempfile.Get().ReadFile(filename, true)
 	if err != nil {
 		panic(err)
 		return
