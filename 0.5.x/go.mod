@@ -2,7 +2,7 @@ module langwan/langgo-examples
 
 go 1.19
 
-require github.com/langwan/langgo v0.5.40
+require github.com/langwan/langgo v0.5.43
 
 require (
 	github.com/aquilax/truncate v1.0.0 // indirect
@@ -34,4 +34,3 @@ require (
 	gorm.io/gorm v1.24.0 // indirect
 )
 
-replace github.com/langwan/langgo => /Users/langwan/Documents/data/langwan/langgo.git
