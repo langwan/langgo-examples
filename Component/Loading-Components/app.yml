@@ -1,0 +1,4 @@
+hello:
+  message: "hello langgo"
+sqlite:
+  path: database.db
