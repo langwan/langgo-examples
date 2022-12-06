@@ -3,13 +3,11 @@ package main
 import (
 	"fmt"
 	"github.com/langwan/langgo"
-	"github.com/langwan/langgo/components/hello"
 	"github.com/langwan/langgo/components/sqlite"
 )
 
 func main() {
-	langgo.Run(&hello.Instance{}, &sqlite.Instance{Path: "./database.db"})
-	fmt.Println(hello.Get().Message)
+	langgo.Run(&sqlite.Instance{Path: "./database.db"})
 	var i int64
 	sqlite.Get().Raw("SELECT 1").Scan(&i)
 	fmt.Println(i)
