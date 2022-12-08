@@ -1,0 +1,4 @@
+download:
+  workers: 5
+  part_size: 5m
+  buf_size: 200k

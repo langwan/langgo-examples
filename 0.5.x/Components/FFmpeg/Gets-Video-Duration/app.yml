@@ -1,0 +1,4 @@
+ffmpeg:
+  ffmpeg: /opt/homebrew/bin/ffmpeg
+  ffprobe: /opt/homebrew/bin/ffprobe
+  command_timeout: 1h
