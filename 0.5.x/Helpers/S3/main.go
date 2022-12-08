@@ -7,7 +7,7 @@ import (
 )
 
 func main() {
-	client, err := helper_s3.NewClient("oss-cn-hangzhou.aliyuncs.com", "LTAI5tRiZ2Djq1qFBaBkfofr", "hP2If3OJT2erbfUzjurppDi08oviWY", "banyun-files", "oss-cn-hangzhou", helper_s3.WithTimeout(time.Hour, time.Hour, time.Hour))
+	client, err := helper_s3.NewClient("xxxxxx", "xxxxxx", "xxxxxx", "xxxxxx", "xxxxxx", helper_s3.WithTimeout(time.Hour, time.Hour, time.Hour))
 	if err != nil {
 		panic(err)
 	}

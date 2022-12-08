@@ -1,4 +1,0 @@
-s3:
-  put_timeout: 1h
-  download_timeout : 1h
-  read_timeout : 1h
