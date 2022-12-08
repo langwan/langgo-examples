@@ -5,7 +5,7 @@ import (
 	"fmt"
 	"github.com/langwan/langgo"
 	"github.com/langwan/langgo/components/download"
-	"github.com/langwan/langgo/components/s3"
+	helper_oss "github.com/langwan/langgo/helpers/oss"
 	helper_progress "github.com/langwan/langgo/helpers/progress"
 )
 
@@ -17,20 +17,14 @@ func (l MyListener) ProgressChanged(event *helper_progress.ProgressEvent) {
 }
 
 func main() {
-	langgo.Run(&download.Instance{}, &s3.Instance{})
-	s3Client, err := s3.Get().NewClient(&s3.Client{
-		Endpoint:        "xxxxxx",
-		AccessKeyId:     "xxxxxx",
-		AccessKeySecret: "xxxxxx",
-		BucketName:      "xxxxxx",
-		Region:          "xxxxxx",
-	})
+	langgo.Run(&download.Instance{})
+	ossClient, err := helper_oss.NewClient("xxxxxx", "xxxxxx", "xxxxxx", "xxxxxx")
 	if err != nil {
 		panic(err)
 	}
-	reader := download.S3Reader{
+	reader := download.OssReader{
 		ObjectName: "Homework - 1028.mp4",
-		Client:     s3Client,
+		Client:     ossClient,
 	}
 	download.Download(context.Background(), "./output.mp4", &reader, &MyListener{})
 }
