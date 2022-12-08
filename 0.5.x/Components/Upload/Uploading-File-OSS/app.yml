@@ -1,0 +1,3 @@
+upload:
+  workers: 5
+  part_size: 5m
