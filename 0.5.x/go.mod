@@ -2,7 +2,7 @@ module langwan/langgo-examples
 
 go 1.19
 
-require github.com/langwan/langgo v0.5.48
+require github.com/langwan/langgo v0.5.49
 
 require (
 	github.com/aliyun/aliyun-oss-go-sdk v2.2.5+incompatible // indirect
@@ -37,4 +37,8 @@ require (
 	gorm.io/driver/mysql v1.3.6 // indirect
 	gorm.io/driver/sqlite v1.4.2 // indirect
 	gorm.io/gorm v1.24.0 // indirect
+)
+
+replace (
+	github.com/langwan/langgo => /Users/langwan/Documents/data/langwan/langgo.git
 )
